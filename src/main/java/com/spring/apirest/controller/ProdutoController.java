@@ -35,7 +35,7 @@ public class ProdutoController {
 		return ResponseEntity.ok(service.findById(id));
 	}
 
-	@PostMapping(value = "/produtos")
+	@PostMapping(value = "/produto")
 	public ResponseEntity<Produto> save(@RequestBody Produto produto) {
 		Produto obj = service.save(produto);
 		URI uri = ServletUriComponentsBuilder.fromCurrentRequest().path("{id}").buildAndExpand(obj.getId()).toUri();
@@ -47,7 +47,7 @@ public class ProdutoController {
 		service.delete(id);
 		return ResponseEntity.noContent().build();
 	}
-	
+	@PutMapping(value = "/produto/{id}")
 	public ResponseEntity<Produto> update(@PathVariable Long id, @RequestBody Produto produto){
 		return ResponseEntity.ok(service.update(id, produto));
 	}
