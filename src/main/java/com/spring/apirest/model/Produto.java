@@ -11,16 +11,19 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "TB_PRODUTO")
-public class Produto implements Serializable{
+public class Produto implements Serializable {
 	private static final long serialVersionUID = 1L;
-	
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
 	private String name;
 	private Double preco;
 	private Integer quantidade;
-	
+
+	public Produto() {
+	}
+
 	public Produto(Long id, String name, Double preco, Integer quantidade) {
 		super();
 		this.id = id;
@@ -77,6 +80,5 @@ public class Produto implements Serializable{
 		Produto other = (Produto) obj;
 		return Objects.equals(id, other.id);
 	}
-	
-	
+
 }
