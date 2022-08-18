@@ -1,4 +1,4 @@
-package com.spring.apirest.model;
+package com.produtos.apirest.model;
 
 import java.io.Serializable;
 import java.util.Objects;

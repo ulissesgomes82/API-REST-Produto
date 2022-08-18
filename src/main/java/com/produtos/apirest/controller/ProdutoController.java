@@ -1,4 +1,4 @@
-package com.spring.apirest.controller;
+package com.produtos.apirest.controller;
 
 import java.net.URI;
 import java.util.List;
@@ -15,8 +15,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
-import com.spring.apirest.model.Produto;
-import com.spring.apirest.service.ProdutoService;
+import com.produtos.apirest.model.Produto;
+import com.produtos.apirest.service.ProdutoService;
 
 @RestController
 @RequestMapping(value = "/api")

@@ -1,4 +1,4 @@
-package com.spring.apirest.config;
+package com.produtos.apirest.config;
 
 import java.util.Arrays;
 
@@ -6,8 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Configuration;
 
-import com.spring.apirest.model.Produto;
-import com.spring.apirest.repositories.ProdutoRepository;
+import com.produtos.apirest.model.Produto;
+import com.produtos.apirest.repositories.ProdutoRepository;
 
 @Configuration
 public class TesteConfig implements CommandLineRunner {
