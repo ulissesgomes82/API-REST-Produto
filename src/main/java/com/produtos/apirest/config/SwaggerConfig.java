@@ -20,14 +20,16 @@ public class SwaggerConfig {
 	@Bean
 	public Docket productApi() {
 		return new Docket(DocumentationType.SWAGGER_2).select()
-				.apis(RequestHandlerSelectors.basePackage("com.produtos.api")).paths(PathSelectors.regex("/api.*")).build()
-				.apiInfo(metaInfo());
+				.apis(RequestHandlerSelectors.basePackage("com.produtos.api")).paths(PathSelectors.regex("/api.*"))
+				.build().apiInfo(metaInfo());
 	}
 
 	private ApiInfo metaInfo() {
 
 		ApiInfo apiInfo = new ApiInfo("Produtos API REST", "API REST de cadastro de produtos.", "1.0",
-				"Terms of Service", new Contact("Ulisses Gomes", null, "ulissesgomes2005@gmail.com"),
+				"Terms of Service",
+				new Contact("Ulisses Gomes", "https://www.linkedin.com/in/ulisses-araujo-59831931/",
+						"ulissesgomes2005@gmail.com"),
 				"Apache License Version 2.0", "https://www.apache.org/licesen.html", new ArrayList<>());
 
 		return apiInfo;
